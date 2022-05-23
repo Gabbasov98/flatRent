@@ -1,0 +1,22 @@
+@import "../vars";
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-out .225s;
+    padding: 0;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-red {
+    background-color: $primary;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    &:hover {
+        color: #fff;
+        background-color: darken($primary, 10%);
+    }
+}

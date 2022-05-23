@@ -1,0 +1,131 @@
+@import 'vars';
+@import 'components/text.scss';
+@import 'components/button.scss';
+@import 'components/fonts.scss';
+@import 'components/cards.scss';
+[tooltip] {
+    position: relative;
+    &:hover {
+        &::before {
+            opacity: 1;
+            pointer-events: unset;
+        }
+    }
+    &:before {
+        content: attr(tooltip);
+        position: absolute;
+        z-index: 1;
+        padding: 0 9px;
+        white-space: nowrap;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        height: 20px;
+        background-color: rgba(#000, .8);
+        color: #fff;
+        font-size: 12px;
+        opacity: 0;
+        pointer-events: none;
+        top: 100%;
+        margin-top: 3px;
+        transition: all .225s;
+    }
+}
+
+.title-line {
+    position: relative;
+    padding-left: 42px;
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        width: 24px;
+        height: 2px;
+        background-color: $green;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @media screen and (max-width: 576px) {
+        padding-left: 0;
+        &::before {
+            display: none;
+        }
+    }
+}
+
+.scroll-up {
+    z-index: 95;
+    position: fixed;
+    right: 264px;
+    bottom: 90px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: all .3s;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    // opacity: 1;
+    &:hover {
+        transform: scale(1.07);
+    }
+    @media screen and (max-width: 1800px) {
+        right: 40px;
+    }
+    @media screen and (max-width: 992px) {
+        right: 20px;
+        bottom: 40px;
+    }
+}
+
+.scroll-up--active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.socials {
+    position: fixed;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 90;
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        border-radius: 8px;
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+        &--telegram {
+            background-color: #2d82e7;
+            &:hover {
+                background-color: darken(#2d82e7, 10%);
+            }
+        }
+        &--whatsapp {
+            background-color: $green;
+            &:hover {
+                background-color: darken($green, 10%);
+            }
+        }
+    }
+    @media screen and (max-width: 992px) {
+        right: unset;
+        left: 20px;
+        bottom: 40px;
+        top: unset;
+        transform: unset;
+        display: flex;
+        align-items: center;
+        &__item {
+            &:not(:last-child) {
+                margin: 0 8px 0 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@import "../vars";
+.display2 {
+    font-size: 28px;
+    line-height: 110%;
+    font-weight: 700;
+}
+
+.display3 {
+    font-size: 24px;
+    line-height: 110%;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+    .display2 {
+        font-size: 22px;
+    }
+    .display3 {
+        font-size: 20px;
+    }
+}

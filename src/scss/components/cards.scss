@@ -1,0 +1,122 @@
+.catalog-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: $shadow;
+    &__img {
+        height: 240px;
+        display: block;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__bottom {
+        padding: 32px;
+    }
+    &__title {
+        font-size: 16px;
+        line-height: 120%;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    &__price {
+        font-size: 24px;
+        font-weight: 700;
+        color: #70c560;
+        margin-top: 13px;
+        span {
+            font-size: 16px;
+            font-weight: 400;
+            color: #666666;
+        }
+    }
+    &__items {
+        margin-top: 13px;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        padding: 6px 0;
+        &:not(:first-child) {
+            border-top: 1px solid #e1e0de;
+        }
+        &-icon {
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+        }
+        &-desc {
+            margin-left: auto;
+        }
+    }
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 16px;
+    }
+    &__btn {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        &:nth-last-child(2),
+        &:nth-last-child(3),
+        &:last-child {
+            &::before {
+                left: unset;
+                right: 0;
+            }
+        }
+        &:hover {
+            path {
+                fill: $green;
+            }
+        }
+        &--air {
+            background-image: url(../img/catalog_icon5.png);
+            &:hover {
+                background-image: url(../img/catalog_item5-green.png);
+            }
+        }
+        &--fridge {
+            background-image: url(../img/catalog_icon6.png);
+            &:hover {
+                background-image: url(../img/catalog_icon6-green.png);
+            }
+        }
+        &--iron {
+            background-image: url(../img/catalog_icon7.png);
+            &:hover {
+                background-image: url(../img/catalog_icon7-green.png);
+            }
+        }
+        &--washer {
+            background-image: url(../img/catalog_icon8.png);
+            &:hover {
+                background-image: url(../img/catalog_icon8-green.png);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .catalog-card {
+        &__img {
+            height: 200px;
+        }
+        &__bottom {
+            padding: 15px;
+        }
+    }
+}

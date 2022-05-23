@@ -1,0 +1,39 @@
+@import "../vars.scss";
+.breadcrumbs {
+    margin-top: 64px;
+    &__inner {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 8px;
+        box-shadow: $shadow;
+        position: relative;
+        z-index: 2;
+    }
+    &__item {
+        position: relative;
+        font-weight: 400;
+        display: inline;
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 400;
+        text-decoration: underline !important;
+        &:last-child {
+            font-weight: 600;
+            text-decoration: none !important;
+        }
+        &:not(:first-child) {
+            margin-left: 23px;
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                width: 6px;
+                height: 1px;
+                background: #000;
+                top: 50%;
+                right: 100%;
+                margin-right: 9px;
+            }
+        }
+    }
+}
