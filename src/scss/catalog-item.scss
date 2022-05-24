@@ -25,7 +25,7 @@
         margin-top: 13px;
         span {
             font-size: 16px;
-            font-weight: 400;
+            font-weight: 500;
             color: #666666;
         }
     }
@@ -260,7 +260,10 @@
     }
     .swiper {
         &-container {
-            padding: 30px 0;
+            width: calc(100% + 60px);
+            margin-left: -30px;
+            overflow: hidden;
+            padding: 30px;
         }
         &-button {
             &-next,
@@ -343,6 +346,15 @@
             grid-template-columns: 1fr 1fr;
         }
     }
+    .collection2 {
+        .swiper {
+            &-container {
+                width: calc(100% + 40px);
+                margin-left: -20px;
+                padding: 30px 20px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -389,6 +401,11 @@
     .collection2 {
         padding: 15px 0;
         .swiper {
+            &-container {
+                width: calc(100% + 20px);
+                margin-left: -20px;
+                padding: 30px 10px;
+            }
             &-button {
                 &-prev,
                 &-next {

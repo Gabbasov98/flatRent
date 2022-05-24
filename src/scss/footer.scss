@@ -103,24 +103,31 @@
 @media screen and (max-width: 992px) {
     .footer {
         background: #e3e2e0;
-        padding: 40px 0;
+        padding: 40px 0 110px;
         &__inner {
             min-height: unset;
             display: block;
         }
         &__logo {
+            justify-content: center;
             br {
                 display: none;
             }
         }
         &__links {
             margin-top: 30px;
+            text-align: center;
+        }
+        &__phone,
+        &__socials {
+            justify-content: center;
         }
         &__contacts {
             margin-top: 30px;
         }
         &__by {
-            margin-top: 30px;
+            margin: 30px auto 0;
+            justify-content: center;
         }
     }
 }

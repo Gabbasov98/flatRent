@@ -2,7 +2,12 @@
     background-color: #ffffff;
     border-radius: 8px;
     // overflow: hidden;
-    box-shadow: $shadow;
+    box-shadow: 13px 13px 10px 0px rgba(0, 0, 0, .04), 7px 7px 5px 0px rgba(0, 0, 0, .03), 3px 3px 2px 0px rgba(0, 0, 0, .02);
+    display: block;
+    &:hover {
+        color: $black;
+        box-shadow: $shadow;
+    }
     &__img {
         height: 240px;
         display: block;
@@ -32,7 +37,7 @@
         margin-top: 13px;
         span {
             font-size: 16px;
-            font-weight: 400;
+            font-weight: 500;
             color: #666666;
         }
     }
