@@ -254,7 +254,7 @@
 
 .collection2 {
     padding: 36px 0 6px;
-    overflow: hidden;
+    // overflow: hidden;
     &__slider {
         position: relative;
     }
@@ -262,8 +262,17 @@
         &-container {
             width: calc(100% + 60px);
             margin-left: -30px;
-            overflow: hidden;
             padding: 30px;
+        }
+        &-slide {
+            opacity: 0;
+            pointer-events: none;
+            &-next+.swiper-slide,
+            &-active,
+            &-next {
+                opacity: 1;
+                pointer-events: unset;
+            }
         }
         &-button {
             &-next,
